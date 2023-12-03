@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Resources;
 
-
 Console.WriteLine("Bienvenue dans cette nouvelle édition de Advent of code 2023");
 do
 {
@@ -19,7 +18,6 @@ do
     }
     else
     {
-        string[] lines = input.Split("\r\n");
         object? instance = Activator.CreateInstance(type);
         MethodInfo? method = type.GetMethod("SolvePart1");
         if (method == null)
@@ -29,7 +27,7 @@ do
 
         Stopwatch sw = Stopwatch.StartNew();
         object? res1 = null;
-            try { res1 = method?.Invoke(instance, new object[] { lines }) ?? "?"; }catch(Exception e) { res1 = e.Message; }
+            try { res1 = method?.Invoke(instance, new object[] { input }) ?? "?"; }catch(Exception e) { res1 = e.Message; }
             
         string elapsed1 = GetStopWatchString(sw);
         MethodInfo? method2 = type.GetMethod("SolvePart2");
@@ -38,7 +36,7 @@ do
             Console.WriteLine($"Le jour {day} n'a pas d'implémentation de la 2ème solution");
         }
         sw.Restart();
-        var res2 = method2?.Invoke(instance, new object[] { lines }) ?? "?";
+        var res2 = method2?.Invoke(instance, new object[] { input }) ?? "?";
         string elapsed2 = GetStopWatchString(sw);
         sw.Stop();
         DrawResult($"Résultat de la partie 1 : {res1}, temps : {elapsed1}", $"Résultat de la partie 2 : {res2}, temps : {elapsed2}");

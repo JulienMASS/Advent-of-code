@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +9,23 @@ namespace Advent_of_code_2023
 {
     internal class Day3
     {
-        public long SolvePart1(string[] input)
+        public long SolvePart1(string input)
         {
             long sum = 0;
-            for (int i = 0; i < input.Length; i++)
+            string[] lines = input.Split("\r\n");
+            for (int i = 0; i < lines.Length; i++)
             {
                 string last_chars = "";
                 bool isAdjacent = false;
-                for (int j = 0; j < input[i].Length; j++)
+                for (int j = 0; j < lines[i].Length; j++)
                 {
-                    char character = input[i][j];
+                    char character = lines[i][j];
                     if (char.IsDigit(character))
                     {
                         last_chars += character;
                         if (!isAdjacent)
                         {
-                            isAdjacent = lookForAdjacent((i, j), input) != null;
+                            isAdjacent = lookForAdjacent((i, j), lines) != null;
                         }
                     }
                     else
@@ -40,8 +42,9 @@ namespace Advent_of_code_2023
             return sum;
         }
 
-        public long SolvePart2(string[] input)
+        public long SolvePart2(string input)
         {
+            string[] lines = input.Split("\r\n");
             long sum = 0;
             Dictionary<(int, int), int> matches = new Dictionary<(int, int), int>();
 
@@ -61,19 +64,19 @@ namespace Advent_of_code_2023
                 }
             }
 
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
                 string last_chars = "";
                 (int,int)? adjacent = null;
-                for (int j = 0; j < input[i].Length; j++)
+                for (int j = 0; j < lines[i].Length; j++)
                 {
-                    char character = input[i][j];
+                    char character = lines[i][j];
                     if (char.IsDigit(character))
                     {
                         last_chars += character;
                         if (!adjacent.HasValue)
                         {
-                            adjacent = lookForAdjacent((i, j), input,'*');
+                            adjacent = lookForAdjacent((i, j), lines, '*');
                         }
                     }
                     else

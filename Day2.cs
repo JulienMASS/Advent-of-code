@@ -10,12 +10,12 @@ namespace Advent_of_code_2023
 {
     internal class Day2
     {
-        public int SolvePart1(string[] input)
+        public int SolvePart1(string input)
         {
             int sum = 0;
-            
+            string[] lines = input.Split("\r\n");
 
-            for (int i = 0; i<input.Length;i++)
+            for (int i = 0; i<lines.Length;i++)
             {
 
                 Dictionary<string, int> balls = new Dictionary<string, int>()
@@ -25,7 +25,7 @@ namespace Advent_of_code_2023
                     {"blue",14}
                 };
                 bool valid = true;
-                string games = input[i].Split(":")[1];
+                string games = lines[i].Split(":")[1];
                 foreach (string set in games.Split(";"))
                 {
                     foreach(string pick in set.Split(','))
@@ -45,12 +45,13 @@ namespace Advent_of_code_2023
             return sum;
         }
 
-        public int SolvePart2(string[] input)
+        public int SolvePart2(string input)
         {
             int sum = 0;
-            for (int i = 0; i<input.Length;i++)
+            string[] lines = input.Split("\r\n");
+            for (int i = 0; i< lines.Length;i++)
             {
-                string games = input[i].Split(":")[1];
+                string games = lines[i].Split(":")[1];
                 Dictionary<string, int> minimum = new Dictionary<string, int>()
                 {
                     {"red",0},

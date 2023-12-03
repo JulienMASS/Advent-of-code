@@ -9,10 +9,10 @@ namespace Advent_of_code_2023
 {
     internal class Day1
     {
-        public int SolvePart1(string[] input)
+        public int SolvePart1(string input)
         {
             int sum = 0;
-            foreach (string line in input)
+            foreach (string line in input.Split("\r\n"))
             {
                 char[] numbers = new char[2];
                 for (int i = 0; i < line.Length; i++)
@@ -29,28 +29,7 @@ namespace Advent_of_code_2023
             return sum;
         }
 
-        public int SolvePart2Test(string[] args)
-        {
-            Dictionary<string, char> stringDigits = new Dictionary<string, char>()
-            {
-                {"one",'1'},
-                {"two",'2'},
-                {"three",'3'},
-                {"four",'4'},
-                {"five",'5'},
-                {"six",'6'},
-                {"seven",'7'},
-                {"eight",'8'},
-                {"nine",'9'},
-            };
-            String[] newInput = new string[args.Length];   
-            for (int i = 0 ; i < args.Length ; i++)
-            {
-            }
-            return SolvePart1(newInput);
-        }
-
-        public int SolvePart2(string[] input)
+        public int SolvePart2(string input)
         {
             int sum = 0;
             Dictionary<string, char> stringDigits = new Dictionary<string, char>()
@@ -65,7 +44,7 @@ namespace Advent_of_code_2023
                 {"eight",'8'},
                 {"nine",'9'},
             };
-            foreach (string line in input)
+            foreach (string line in input.Split("\r\n"))
             {
                 char[] numbers = new char[2];
                 for (int i = 0; i < line.Length; i++)

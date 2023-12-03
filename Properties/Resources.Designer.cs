@@ -91,5 +91,30 @@ namespace Advent_of_code_2023.Properties {
                 return ResourceManager.GetString("Day1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Game 1: 3 blue, 2 green, 6 red; 17 green, 4 red, 8 blue; 2 red, 1 green, 10 blue; 1 blue, 5 green
+        ///Game 2: 9 red, 2 green; 5 red, 1 blue, 6 green; 3 green, 13 red, 1 blue; 3 red, 6 green; 1 blue, 14 red, 6 green
+        ///Game 3: 6 red, 3 blue, 8 green; 6 blue, 12 green, 15 red; 3 blue, 18 green, 4 red
+        ///Game 4: 1 blue, 4 red; 2 blue, 6 red; 13 blue; 11 blue, 1 green, 8 red; 10 blue, 3 green, 2 red; 3 green, 7 blue
+        ///Game 5: 2 red, 1 blue, 8 green; 2 blue, 7 green, 3 red; 1 blue, 7 green, 4 red; 2 blue, 1 green, 1 red [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string Day2 {
+            get {
+                return ResourceManager.GetString("Day2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ....411...............838......721.....44..............................................607..................................................
+        ///...&amp;......519..................*..........#.97.........994..............404..............*...&amp;43........440...882.......673.505.............
+        ///.....*......*...892.........971...%....131....*..........*.......515...$.......157.....412.............-.....*.............*............594.
+        ///..856.495....13...-...............602..........36...$.985....341*.........88.....*.921 [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string Day3 {
+            get {
+                return ResourceManager.GetString("Day3", resourceCulture);
+            }
+        }
     }
 }

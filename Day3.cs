@@ -42,6 +42,7 @@ namespace Advent_of_code_2023
             return sum;
         }
 
+
         public long SolvePart2(string input)
         {
             string[] lines = input.Split("\r\n");

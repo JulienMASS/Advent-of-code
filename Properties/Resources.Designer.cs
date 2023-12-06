@@ -116,5 +116,48 @@ namespace Advent_of_code_2023.Properties {
                 return ResourceManager.GetString("Day3", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à  Card   1: 36 15 12 91 47 98 59 46 83 86 | 86 34 88  7 36 82 90 32 83 56 27 45 49 69 91 47 98 59 13 15 68 12 17 11 46
+        ///Card   2: 55 82  6 50 62  4 21 96 14 39 | 11 34 14 52  7 28 13 81 10 98 88 48 21 22 96  1 93 83 85 60 76 87 57 56 62
+        ///Card   3: 11 88 40  9  7 37 92 15 70 53 | 55 37 97 22 77 34 83 98  1 92 38  5 69 54 25 73 13 94 62 96 78 93 75 23 31
+        ///Card   4: 83 15  5  4  3 92 86  2 91 58 | 58  2 77 32 93 64 37 82 47 28 13 89 16 24 59 76 52 50 55 15 14 68 61 91 98
+        ///Card   5: 59 25  2 83 13 26 39 45 28 74 [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string Day4 {
+            get {
+                return ResourceManager.GetString("Day4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à seeds: 4043382508 113348245 3817519559 177922221 3613573568 7600537 773371046 400582097 2054637767 162982133 2246524522 153824596 1662955672 121419555 2473628355 846370595 1830497666 190544464 230006436 483872831
+        ///
+        ///seed-to-soil map:
+        ///4064811 506246814 25615317
+        ///1520011681 1661018909 106057083
+        ///1007960598 8836276 47579700
+        ///1055540298 679332386 82196064
+        ///2377475243 3574057730 33434621
+        ///2323567163 2090355001 53908080
+        ///2724594670 4209189177 35645909
+        ///3247614896 4244835086 50132210
+        ///2793935335 3209861711 430023 [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string Day5 {
+            get {
+                return ResourceManager.GetString("Day5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Time:        42     89     91     89
+        ///Distance:   308   1170   1291   1467.
+        /// </summary>
+        internal static string Day6 {
+            get {
+                return ResourceManager.GetString("Day6", resourceCulture);
+            }
+        }
     }
 }
